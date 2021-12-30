@@ -17,6 +17,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\BindingContextCodeBehindAsyncPage.xaml.cs">
+      <DependentUpon>BindingContextCodeBehindAsyncPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\BindingContextCodeBehindPage.xaml.cs">
+      <DependentUpon>BindingContextCodeBehindPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="View\BindingContextXamlPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

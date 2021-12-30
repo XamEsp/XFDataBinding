@@ -2,17 +2,15 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:viewmodel="clr-namespace:BasicBinding.ViewModel"
-    x:Class="BasicBinding.View.BindingContextXamlPage">
-    <ContentPage.BindingContext>
-        <viewmodel:BindingContextViewModel/>
-    </ContentPage.BindingContext>
+    x:Class="BasicBinding.View.BindingContextCodeBehindPage">
+
     <StackLayout>
         <Frame 
             BackgroundColor="#2196F3" 
             Padding="24" 
             CornerRadius="0">
             <Label 
-                Text="XAML Binding Context" 
+                Text="Code Behind Binding Context" 
                 HorizontalTextAlignment="Center" 
                 TextColor="White" 
                 FontSize="36"/>

@@ -2,25 +2,36 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:BasicBinding.ViewModel"
     x:Class="BasicBinding.MainPage">
-    
+
     <ContentPage.BindingContext>
         <viewmodel:MainViewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout>
-        <Frame 
-            BackgroundColor="#2196F3" 
-            Padding="24" 
-            CornerRadius="0">
-            <Label 
-                Text="Welcome to Basic DataBindings!" 
-                HorizontalTextAlignment="Center" 
-                TextColor="White" 
-                FontSize="36"/>
-        </Frame>
-        <Button
-            Command="{Binding BindingContextXamlCommand}"
-            Text="XAML Binding Context"/>
-    </StackLayout>
-
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" 
+                Padding="24" 
+                CornerRadius="0">
+                <Label Text="Welcome to Basic DataBindings!" 
+                    HorizontalTextAlignment="Center" 
+                    TextColor="White" 
+                    FontSize="36"/>
+            </Frame>
+            <Frame 
+                BackgroundColor="LightSlateGray" 
+                Padding="12" 
+                CornerRadius="0">
+                <Label Text="Binding Context" 
+                    HorizontalTextAlignment="Center" 
+                    TextColor="White" 
+                    FontSize="28"/>
+            </Frame>
+            <Button Command="{Binding BindingContextXamlCommand}"
+                Text="XAML Binding Context"/>
+            <Button Command="{Binding BindingContextCodeBehindCommand}"
+                Text="Code Behind Binding Context"/>
+            <Button Command="{Binding BindingContextCodeBehindAsyncCommand}"
+                Text="Code Behind Async Binding Context"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

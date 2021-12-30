@@ -3,9 +3,9 @@ using System;
 
 namespace BasicBinding.ViewModel
 {
-    public class BindingContextXamlViewModel : BaseViewModel
+    public class BindingContextViewModel : BaseViewModel
     {
-        public BindingContextXamlViewModel()
+        public BindingContextViewModel()
         {
             Now = DateTime.Now;
         }
