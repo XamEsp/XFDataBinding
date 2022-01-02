@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="BindingConverterDemo.MainPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:BindingConverterDemo.Converters">
+
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<local:IntToBoolConverter x:Key="intToBool" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
+	<StackLayout Padding="10,0">
+		<Entry
+			x:Name="SearchEntry"
+			Placeholder="Enter search term"
+			Text=""
+			VerticalOptions="CenterAndExpand" />
+
+		<Button
+			HorizontalOptions="Center"
+			IsEnabled="{Binding Source={x:Reference SearchEntry}, Path=Text.Length, Converter={StaticResource intToBool}}"
+			Text="Search"
+			VerticalOptions="CenterAndExpand" />
+
+	</StackLayout>
+</ContentPage>
