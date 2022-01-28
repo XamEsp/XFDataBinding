@@ -13,6 +13,25 @@ namespace BasicBinding
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = this;
+        }
+
+        private string _welcomeText = "Welcome to Basic DataBindings!";
+        public string WelcomeText
+        {
+            get
+            {
+                return _welcomeText;
+            }
+            set { _welcomeText=value; }
+        }
+
+        private string _customerName;
+        public string CustomerName
+        {
+            get { return _customerName; }
+            set { _customerName=value; }
+            
         }
     }
 }

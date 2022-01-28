@@ -1,37 +1,49 @@
-﻿<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:BasicBinding.ViewModel"
-    x:Class="BasicBinding.MainPage">
+﻿<ContentPage
+	x:Class="BasicBinding.MainPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:viewmodel="clr-namespace:BasicBinding.ViewModel">
 
-    <ContentPage.BindingContext>
-        <viewmodel:MainViewModel/>
-    </ContentPage.BindingContext>
+	<ContentPage.BindingContext>
+		<viewmodel:MainViewModel />
+	</ContentPage.BindingContext>
 
-    <ScrollView>
-        <StackLayout>
-            <Frame BackgroundColor="#2196F3" 
-                Padding="24" 
-                CornerRadius="0">
-                <Label Text="Welcome to Basic DataBindings!" 
-                    HorizontalTextAlignment="Center" 
-                    TextColor="White" 
-                    FontSize="36"/>
-            </Frame>
-            <Frame 
-                BackgroundColor="LightSlateGray" 
-                Padding="12" 
-                CornerRadius="0">
-                <Label Text="Binding Context" 
-                    HorizontalTextAlignment="Center" 
-                    TextColor="White" 
-                    FontSize="28"/>
-            </Frame>
-            <Button Command="{Binding BindingContextXamlCommand}"
-                Text="XAML Binding Context"/>
-            <Button Command="{Binding BindingContextCodeBehindCommand}"
-                Text="Code Behind Binding Context"/>
-            <Button Command="{Binding BindingContextCodeBehindAsyncCommand}"
-                Text="Code Behind Async Binding Context"/>
-        </StackLayout>
-    </ScrollView>
+	<ScrollView>
+		<StackLayout>
+			<Frame
+				Padding="24"
+				BackgroundColor="#2196F3"
+				CornerRadius="0">
+				<Label
+					FontSize="36"
+					HorizontalTextAlignment="Center"
+					Text="{Binding WelcomeText}"
+					TextColor="White" />
+			</Frame>
+			<Frame>
+				<Entry Placeholder="Enter your name here..." 
+						 x:Name="YourName" 
+						 Text = "{Binding CustomerName, Mode=TwoWay}"/>
+			</Frame>
+			<Frame
+				Padding="12"
+				BackgroundColor="LightSlateGray"
+				CornerRadius="0">
+				<Label
+					FontSize="28"
+					HorizontalTextAlignment="Center"
+					Text="Binding Context"
+					TextColor="White" />
+			</Frame>
+			<Button
+				Command="{Binding BindingContextXamlCommand}"
+				Text="XAML Binding Context" />
+			<Button
+				Command="{Binding BindingContextCodeBehindCommand}"
+				Text="Code Behind Binding Context" />
+			<Button
+				Command="{Binding BindingContextCodeBehindAsyncCommand}"
+				Text="Code Behind Async Binding Context" />
+		</StackLayout>
+	</ScrollView>
 </ContentPage>

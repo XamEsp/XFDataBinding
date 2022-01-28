@@ -20,7 +20,9 @@
 
 		<Button
 			HorizontalOptions="Center"
-			IsEnabled="{Binding Source={x:Reference SearchEntry}, Path=Text.Length, Converter={StaticResource intToBool}}"
+			IsEnabled="{Binding Source={x:Reference SearchEntry},
+			Path=Text.Length,
+			Converter={StaticResource intToBool}}"
 			Text="Search"
 			VerticalOptions="CenterAndExpand" />
 
