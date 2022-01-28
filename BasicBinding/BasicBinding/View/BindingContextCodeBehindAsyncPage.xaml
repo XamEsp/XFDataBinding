@@ -1,0 +1,31 @@
+﻿<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="BasicBinding.View.BindingContextCodeBehindAsyncPage">
+
+    <StackLayout>
+        <Frame 
+            BackgroundColor="#2196F3" 
+            Padding="24" 
+            CornerRadius="0">
+            <Label 
+                Text="Code Behind Async Binding Context" 
+                HorizontalTextAlignment="Center" 
+                TextColor="White" 
+                FontSize="36"/>
+        </Frame>
+
+        <StackLayout
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="Center">
+            <ActivityIndicator
+                IsRunning="True" />
+        </StackLayout>
+
+        <Label
+            Text="{Binding Path=Now}" 
+            HorizontalTextAlignment="Center" 
+            FontSize="36"/>
+
+    </StackLayout>
+</ContentPage>
