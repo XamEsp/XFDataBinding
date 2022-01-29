@@ -13,7 +13,7 @@ namespace BasicBinding
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = this;
+           // BindingContext = this;
         }
 
         private string _welcomeText = "Welcome to Basic DataBindings!";

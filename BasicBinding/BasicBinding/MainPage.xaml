@@ -2,15 +2,16 @@
 	x:Class="BasicBinding.MainPage"
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:viewmodel="clr-namespace:BasicBinding.ViewModel">
+	xmlns:viewmodel="clr-namespace:BasicBinding.ViewModel"
+	xmlns:model="clr-namespace:BasicBinding.Model;assembly=BasicBinding">
 
 	<ContentPage.BindingContext>
-		<viewmodel:MainViewModel />
+		<model:BookStore />
 	</ContentPage.BindingContext>
 
 	<ScrollView>
 		<StackLayout>
-			<Frame
+			<!--<Frame
 				Padding="24"
 				BackgroundColor="#2196F3"
 				CornerRadius="0">
@@ -21,9 +22,10 @@
 					TextColor="White" />
 			</Frame>
 			<Frame>
-				<Entry Placeholder="Enter your name here..." 
-						 x:Name="YourName" 
-						 Text = "{Binding CustomerName, Mode=TwoWay}"/>
+				<Entry
+					x:Name="YourName"
+					Placeholder="Enter your name here..."
+					Text="{Binding CustomerName, Mode=TwoWay}" />
 			</Frame>
 			<Frame
 				Padding="12"
@@ -43,7 +45,23 @@
 				Text="Code Behind Binding Context" />
 			<Button
 				Command="{Binding BindingContextCodeBehindAsyncCommand}"
-				Text="Code Behind Async Binding Context" />
+				Text="Code Behind Async Binding Context" />-->
+			<Label Text="{Binding StoreName}" />
+			<ListView
+				Margin="5,30,5,0"
+				ItemsSource="{Binding Books}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<StackLayout>
+							<Label Text="{Binding Name}" />
+							<Label Text="{Binding Author}" />
+							<DatePicker Date="{Binding PublicationDate}"/>
+						</StackLayout>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+
+
 		</StackLayout>
 	</ScrollView>
 </ContentPage>
