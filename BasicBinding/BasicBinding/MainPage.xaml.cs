@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BasicBinding.Model;
 using Xamarin.Forms;
 
 namespace BasicBinding
@@ -13,7 +14,8 @@ namespace BasicBinding
         public MainPage()
         {
             InitializeComponent();
-           // BindingContext = this;
+            // BindingContext = this;
+            BindingContext =new BookStore();
         }
 
         private string _welcomeText = "Welcome to Basic DataBindings!";
