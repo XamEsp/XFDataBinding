@@ -2,29 +2,28 @@
 	x:Class="BasicBinding.MainPage"
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:viewmodel="clr-namespace:BasicBinding.ViewModel"
 	xmlns:model="clr-namespace:BasicBinding.Model;assembly=BasicBinding">
 
-	<!--<ContentPage.BindingContext>
+	<ContentPage.BindingContext>
 		<model:BookStore />
-	</ContentPage.BindingContext>-->
+	</ContentPage.BindingContext>
 
-	<ScrollView>
+	<ContentPage.Content>
 		<StackLayout>
-			<Label Text="{Binding StoreName}" />
-			<ListView
+		<Label Text="Hello" />
+		<Label Text="{Binding StoreName}" />
+		<ListView
 				ItemsSource="{Binding Books}">
-				<ListView.ItemTemplate>
-					<DataTemplate>
-						<StackLayout>
-							<Label Text="{Binding Name}" />
-							<Label Text="{Binding Author}" />
-						</StackLayout>
-					</DataTemplate>
-				</ListView.ItemTemplate>
-			</ListView>
-		</StackLayout>
-	</ScrollView>
+			<ListView.ItemTemplate>
+				<DataTemplate>
+						<TextCell
+						 Text="{Binding Name}" 
+						 Detail="{Binding Author}"/>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+	</ContentPage.Content>
 </ContentPage>
 
 <!--<Frame
