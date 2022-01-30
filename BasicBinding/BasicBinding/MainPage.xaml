@@ -26,38 +26,4 @@
 	</ContentPage.Content>
 </ContentPage>
 
-<!--<Frame
-				Padding="24"
-				BackgroundColor="#2196F3"
-				CornerRadius="0">
-				<Label
-					FontSize="36"
-					HorizontalTextAlignment="Center"
-					Text="{Binding WelcomeText}"
-					TextColor="White" />
-			</Frame>
-			<Frame>
-				<Entry
-					x:Name="YourName"
-					Placeholder="Enter your name here..."
-					Text="{Binding CustomerName, Mode=TwoWay}" />
-			</Frame>
-			<Frame
-				Padding="12"
-				BackgroundColor="LightSlateGray"
-				CornerRadius="0">
-				<Label
-					FontSize="28"
-					HorizontalTextAlignment="Center"
-					Text="Binding Context"
-					TextColor="White" />
-			</Frame>
-			<Button
-				Command="{Binding BindingContextXamlCommand}"
-				Text="XAML Binding Context" />
-			<Button
-				Command="{Binding BindingContextCodeBehindCommand}"
-				Text="Code Behind Binding Context" />
-			<Button
-				Command="{Binding BindingContextCodeBehindAsyncCommand}"
-				Text="Code Behind Async Binding Context" />-->
+

@@ -11,23 +11,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModel\BindingContextAsyncViewModel.cs" />
+    <Compile Remove="ViewModel\BindingContextViewModel.cs" />
+    <Compile Remove="ViewModel\MainViewModel.cs" />
+    <Compile Remove="View\BindingContextCodeBehindAsyncPage.xaml.cs" />
+    <Compile Remove="View\BindingContextCodeBehindPage.xaml.cs" />
+    <Compile Remove="View\BindingContextXamlPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="View\BindingContextCodeBehindAsyncPage.xaml" />
+    <EmbeddedResource Remove="View\BindingContextCodeBehindPage.xaml" />
+    <EmbeddedResource Remove="View\BindingContextXamlPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="View\BindingContextCodeBehindAsyncPage.xaml.cs">
-      <DependentUpon>BindingContextCodeBehindAsyncPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="View\BindingContextCodeBehindPage.xaml.cs">
-      <DependentUpon>BindingContextCodeBehindPage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="View\BindingContextXamlPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
+    <Folder Include="ViewModel\" />
+    <Folder Include="View\" />
   </ItemGroup>
 </Project>

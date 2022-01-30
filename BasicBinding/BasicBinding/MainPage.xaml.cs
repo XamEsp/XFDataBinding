@@ -14,26 +14,9 @@ namespace BasicBinding
         public MainPage()
         {
             InitializeComponent();
-            // BindingContext = this;
-            BindingContext =new BookStore();
         }
 
-        private string _welcomeText = "Welcome to Basic DataBindings!";
-        public string WelcomeText
-        {
-            get
-            {
-                return _welcomeText;
-            }
-            set { _welcomeText=value; }
-        }
+        public string WelcomeText { get; set; } = "Welcome to Basic DataBindings!";
 
-        private string _customerName;
-        public string CustomerName
-        {
-            get { return _customerName; }
-            set { _customerName=value; }
-            
-        }
     }
 }
