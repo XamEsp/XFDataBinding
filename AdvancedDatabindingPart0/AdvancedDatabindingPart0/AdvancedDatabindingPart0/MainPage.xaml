@@ -8,11 +8,11 @@
 	</ContentPage.BindingContext>
 
 	<ContentPage.Content>
-		<StackLayout>
+		<StackLayout Margin="10,50,0,0">
 			<Label Text="Hello" />
 			<Label Text="{Binding StoreName}" />
 			<ListView
-		ItemsSource="{Binding Books}">
+		        ItemsSource="{Binding Books}">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<TextCell
